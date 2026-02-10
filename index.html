@@ -16,9 +16,8 @@
 
 body{
     font-family:'Poppins', sans-serif;
-    background:linear-gradient(135deg,#eaf4ec,#dcefe2); /* soft pastel green */
+    background:linear-gradient(135deg,#eaf4ec,#dcefe2);
     color:#2b2b2b;
-    scroll-behavior:smooth;
 }
 
 /* NAVBAR */
@@ -50,7 +49,7 @@ nav a{
 }
 
 nav a:hover{
-    color:#4a7c59; /* elegant green hover */
+    color:#4a7c59;
 }
 
 /* HERO */
@@ -87,22 +86,16 @@ section{
     max-width:1050px;
     margin:15px auto;
     line-height:1.7;
-    opacity:0;
-    transform:translateY(40px);
-    transition:all 0.6s ease;
 }
 
-.card.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
+/* Headings */
 h2{
     font-family:'Playfair Display', serif;
     font-size:22px;
     margin-bottom:12px;
 }
 
+/* Lists */
 ul{
     padding-left:20px;
 }
@@ -111,6 +104,7 @@ li{
     margin-bottom:6px;
 }
 
+/* FOOTER */
 footer{
     text-align:center;
     padding:20px;
@@ -213,21 +207,6 @@ View Profile
 <footer>
 © 2026 Vaishnavi Medicharla
 </footer>
-
-<script>
-
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-    cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        if(cardTop < window.innerHeight - 100){
-            card.classList.add('show');
-        }
-    });
-});
-
-</script>
 
 </body>
 </html>
