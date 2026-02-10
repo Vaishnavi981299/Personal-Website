@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vaishnavi Medicharla | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(135deg,#eaf4ec,#dcefe2); /* soft pastel green */
+    color:#2b2b2b;
+    scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 6%;
+    background:white;
+    border-bottom:1px solid #d7e5db;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h2{
+    font-weight:500;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#4a7c59; /* elegant green hover */
+}
+
+/* HERO */
+.hero{
+    padding:50px 6%;
+    background:white;
+    text-align:center;
+    border-bottom:1px solid #d7e5db;
+}
+
+.hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:30px;
+    margin-bottom:6px;
+}
+
+.hero p{
+    font-size:14px;
+    color:#666;
+}
+
+/* SECTION */
+section{
+    padding:30px 6%;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:40px 45px;
+    border-radius:16px;
+    box-shadow:0 8px 22px rgba(0,0,0,0.04);
+    width:95%;
+    max-width:1050px;
+    margin:15px auto;
+    line-height:1.7;
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.6s ease;
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h2{
+    font-family:'Playfair Display', serif;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:6px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:white;
+    border-top:1px solid #d7e5db;
+    font-size:13px;
+    color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Portfolio</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="hero">
+<h1>Vaishnavi Medicharla</h1>
+<p>Engineering Student | Software Development Enthusiast</p>
+</div>
+
+<section id="about">
+<div class="card">
+<h2>About</h2>
+<p>
+Second-year B.E student at Vasavi College of Engineering with strong interest in
+Data Structures, Object-Oriented Programming, and structured problem solving.
+Focused on building efficient console-based and application-driven solutions.
+</p>
+</div>
+</section>
+
+<section id="projects">
+<div class="card">
+<h2>Projects</h2>
+<ul>
+<li><strong>LumosPath</strong> - Women's Safety Companion</li>
+<li><strong>Journeo</strong> - Interest-based Tourist Guide (Console using Data Structures)</li>
+<li><strong>Placement Management System</strong> - Java Console Application integrated with GUI</li>
+<li><strong>SnakeByte</strong> - Python-based Game Development</li>
+</ul>
+</div>
+</section>
+
+<section id="skills">
+<div class="card">
+<h2>Technical Skills</h2>
+<ul>
+<li>C Programming</li>
+<li>Python</li>
+<li>Java</li>
+<li>Data Structures & Algorithms</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Other Skills</h2>
+<ul>
+<li>Analytical Thinking</li>
+<li>Problem Solving</li>
+<li>Team Collaboration</li>
+<li>Communication</li>
+</ul>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>Certifications</h2>
+<ul>
+<li><strong>NPTEL</strong> - Data Structures in Python</li>
+<li><strong>Oracle AI Foundations Associate</strong></li>
+<li><strong>Cisco Networks Certified</strong></li>
+<li><strong>IIT Hyderabad</strong> - Certified Akshardaan Volunteer</li>
+</ul>
+</div>
+</section>
+
+<section id="contact">
+<div class="card">
+<h2>Contact</h2>
+<p>Email: vaishnavimedicharla9@gmail.com</p>
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/vaishnavi-medicharla-107ba7331/" target="_blank">
+View Profile
+</a>
+</p>
+</div>
+</section>
+
+<footer>
+© 2026 Vaishnavi Medicharla
+</footer>
+
+<script>
+
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < window.innerHeight - 100){
+            card.classList.add('show');
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
